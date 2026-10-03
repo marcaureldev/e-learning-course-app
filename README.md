@@ -1,11 +1,11 @@
 # E-Learning Course App
 
-Site de cours en ligne construit avec Nuxt 3 et Tailwind CSS, d'après une
+Site de cours en ligne construit avec Nuxt 4 et Tailwind CSS, d'après une
 maquette Figma (8 pages, déclinées en Desktop 1920 / Laptop 1440 / Mobile 390).
 
 ## Stack
 
-- [Nuxt 3](https://nuxt.com) + TypeScript (`strict`)
+- [Nuxt 4](https://nuxt.com) + TypeScript (`strict`)
 - [Tailwind CSS 3](https://tailwindcss.com) via PostCSS
 - [`@nuxt/fonts`](https://github.com/nuxt/fonts) — Be Vietnam Pro, auto-hébergée
 - [`@nuxt/image`](https://image.nuxt.com) — `<NuxtImg>`
@@ -51,13 +51,18 @@ L'échelle `gray` de Tailwind reste disponible et inchangée.
 ## Structure
 
 ```
-components/
-  layout/     Header (barre promo + navbar), Navbar
-  ui/         primitives réutilisables (UiButton)
-  icons/      icônes inline
-pages/        une page par route
-layouts/      default.vue
-assets/css/   main.css (directives Tailwind + couche de base)
+app/
+  components/
+    layout/   Header (barre promo + navbar), Navbar
+    ui/       primitives réutilisables (UiButton)
+    icons/    icônes inline
+  pages/      une page par route
+  layouts/    default.vue
+  assets/css/ main.css (directives Tailwind + couche de base)
+  app.vue     coque applicative
+  error.vue   404 et erreurs serveur
+public/       assets servis tels quels (icônes, images)
+server/       routes d'API Nitro
 ```
 
 ## État d'avancement
