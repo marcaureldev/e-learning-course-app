@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2024-12-05',
+  compatibilityDate: '2025-07-15',
 
   typescript: {
     strict: true,

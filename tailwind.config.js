@@ -14,13 +14,13 @@ import defaultTheme from 'tailwindcss/defaultTheme.js'
  */
 export default {
   content: [
-    './components/**/*.{js,ts,vue}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './composables/**/*.{js,ts}',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
-    './error.vue',
+    './app/components/**/*.{js,ts,vue}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue',
+    './app/composables/**/*.{js,ts}',
+    './app/plugins/**/*.{js,ts}',
+    './app/app.vue',
+    './app/error.vue',
   ],
   theme: {
     extend: {
