@@ -28,6 +28,21 @@ pnpm dev        # http://localhost:3000
 | `pnpm lint` | ESLint (`lint:fix` pour corriger) |
 | `pnpm typecheck` | vérification des types (`vue-tsc`) |
 
+## Convention de commits
+
+Les messages suivent les [conventional commits](https://www.conventionalcommits.org),
+vérifiés par commitlint via un hook `commit-msg` géré par husky. Un message hors
+convention est refusé localement.
+
+```
+type(scope facultatif): sujet en minuscules, sans point final
+```
+
+Types admis : `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`,
+`revert`, `style`, `test`. L'en-tête ne dépasse pas 100 caractères.
+
+Le hook s'installe tout seul : `pnpm install` déclenche le script `prepare`.
+
 ## Convention de couleurs
 
 > [!IMPORTANT]
