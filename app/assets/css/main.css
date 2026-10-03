@@ -29,8 +29,6 @@
     "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  /* Largeur du conteneur de la maquette au point de rupture desktop.
-     Le namespace `--container-*` alimente les utilitaires `max-w-*`. */
   --container-container: 1596px;
 
   --animate-marquee: marquee 30s linear infinite;
