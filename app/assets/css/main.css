@@ -29,23 +29,6 @@
     "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --container-container: 1596px;
-
-  --animate-marquee: marquee 30s linear infinite;
-
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-}
-
-/* Tailwind 4 n'expose pas de namespace de thème pour les images de fond. */
-@utility bg-main-learn {
-  background-image: url("/images/main-learn-img.svg");
 }
 
 @layer base {
@@ -64,7 +47,6 @@
   }
 }
 
-/* Respecte le réglage système : neutralise carrousel, transitions et défilement animé. */
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
