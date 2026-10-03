@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex aspect-[358/247] items-center justify-center overflow-hidden rounded-xl border-4 border-white-97 lg:aspect-[1596/790] lg:border-[16px]"
+    class="relative flex aspect-358/247 items-center justify-center overflow-hidden rounded-xl border-4 border-white-97 lg:aspect-1596/790 lg:border-16"
   >
     <NuxtImg
       src="/images/learning-together.png"
@@ -14,7 +14,7 @@
     <div class="absolute inset-0 bg-black/20" />
     <button
       type="button"
-      class="relative rounded-full border-4 border-white/30 bg-white/20 p-2.5 transition-colors hover:bg-white/30 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white lg:border-[6px] lg:p-[14px]"
+      class="relative rounded-full border-4 border-white/30 bg-white/20 p-2.5 transition-colors hover:bg-white/30 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white lg:border-[6px] lg:p-3.5"
       aria-label="Play the introduction video"
     >
       <NuxtImg
@@ -23,7 +23,7 @@
         aria-hidden="true"
         width="44"
         height="44"
-        class="size-7 lg:size-[44px]"
+        class="size-7 lg:size-11"
       />
     </button>
   </section>

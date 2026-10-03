@@ -7,9 +7,9 @@ maquette Figma (8 pages, déclinées en Desktop 1920 / Laptop 1440 / Mobile 390)
 
 - [Nuxt 4](https://nuxt.com) + TypeScript (`strict`)
 - [Tailwind CSS 4](https://tailwindcss.com) via `@tailwindcss/vite`
-- [`@nuxt/fonts`](https://github.com/nuxt/fonts) — Be Vietnam Pro, auto-hébergée
-- [`@nuxt/image`](https://image.nuxt.com) — `<NuxtImg>`
-- [`@nuxt/eslint`](https://eslint.nuxt.com) — config plate + règles stylistiques
+- [`@nuxt/fonts`](https://github.com/nuxt/fonts) - Be Vietnam Pro, auto-hébergée
+- [`@nuxt/image`](https://image.nuxt.com) - `<NuxtImg>`
+- [`@nuxt/eslint`](https://eslint.nuxt.com) - config plate + règles stylistiques
 
 ## Démarrer
 
@@ -65,7 +65,7 @@ L'échelle `gray` de Tailwind reste disponible et inchangée : nos gris
 portent l'orthographe britannique `grey`, reprise de Figma.
 
 Les tokens sont déclarés en CSS dans `app/assets/css/main.css`, sous
-`@theme` — Tailwind 4 n'utilise plus de fichier `tailwind.config.js`.
+`@theme` - Tailwind 4 n'utilise plus de fichier `tailwind.config.js`.
 
 ## Structure
 

@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
         <div class="flex items-center gap-6 lg:gap-[50px]">
           <NuxtLink
             to="/"
-            aria-label="Online Courses — home"
+            aria-label="Online Courses - home"
             class="shrink-0 rounded-lg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
           >
             <NuxtImg

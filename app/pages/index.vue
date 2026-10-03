@@ -10,10 +10,11 @@ useSeoMeta({
 
 <template>
   <UiContainer>
-    <div class="mt-12 space-y-8 lg:mt-[100px] lg:space-y-[100px]">
+    <div class="mt-12 space-y-8 lg:mt-25 lg:space-y-25">
       <HomeHero />
       <HomeTrustedBy />
       <HomeFeaturedVideo />
+      <HomeBenefits />
     </div>
   </UiContainer>
 </template>

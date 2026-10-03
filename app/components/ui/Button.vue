@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Variant = 'primary' | 'secondary' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'soft' | 'ghost'
 type Size = 'sm' | 'md' | 'lg'
 
 const props = withDefaults(defineProps<{
@@ -23,11 +23,12 @@ const tag = computed(() => (props.to ? NuxtLink : 'button'))
 const variantClasses: Record<Variant, string> = {
   primary: 'bg-orange-50 font-semibold text-white hover:bg-orange-50/90',
   secondary: 'border border-white-95 bg-white font-medium text-grey-15 hover:bg-white-95',
+  soft: 'border border-white-95 bg-white-99 font-medium text-grey-15 hover:bg-white-95',
   ghost: 'text-grey-30 hover:bg-white-95 hover:text-grey-10',
 }
 
-// `md` et `lg` reprennent les deux gabarits de bouton de la maquette — celui du
-// Login dans la navbar et ceux du hero — réduits sous le point de rupture `sm`,
+// `md` et `lg` reprennent les deux gabarits de bouton de la maquette - celui du
+// Login dans la navbar et ceux du hero - réduits sous le point de rupture `sm`,
 // où la maquette mobile resserre les boutons.
 const sizeClasses: Record<Size, string> = {
   sm: 'px-4 py-2 text-sm',
