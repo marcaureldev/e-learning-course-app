@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/image'],
@@ -19,15 +21,12 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-07-15',
 
-  typescript: {
-    strict: true,
+  vite: {
+    plugins: [tailwindcss()],
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  typescript: {
+    strict: true,
   },
 
   eslint: {

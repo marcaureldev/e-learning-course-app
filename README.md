@@ -6,7 +6,7 @@ maquette Figma (8 pages, déclinées en Desktop 1920 / Laptop 1440 / Mobile 390)
 ## Stack
 
 - [Nuxt 4](https://nuxt.com) + TypeScript (`strict`)
-- [Tailwind CSS 3](https://tailwindcss.com) via PostCSS
+- [Tailwind CSS 4](https://tailwindcss.com) via `@tailwindcss/vite`
 - [`@nuxt/fonts`](https://github.com/nuxt/fonts) — Be Vietnam Pro, auto-hébergée
 - [`@nuxt/image`](https://image.nuxt.com) — `<NuxtImg>`
 - [`@nuxt/eslint`](https://eslint.nuxt.com) — config plate + règles stylistiques
@@ -58,10 +58,14 @@ Le hook s'installe tout seul : `pnpm install` déclenche le script `prepare`.
 | `Orange/95` | `orange-95` | `#FFF4E5` |
 | `Orange/97` | `orange-97` | `#FFF9F0` |
 | `Grey/10` → `Grey/40` | `grey-10` … `grey-40` | `#1A1A1A` → `#656567` |
-| `Absolute/White` | `white` | `#FFFFFF` |
+| `Absolute/White` | `white` | `#FFFFFF` (fourni par Tailwind) |
 | `White/95` / `97` / `99` | `white-95` … | `#F1F1F3` / `#F7F7F8` / `#FCFCFD` |
 
-L'échelle `gray` de Tailwind reste disponible et inchangée.
+L'échelle `gray` de Tailwind reste disponible et inchangée : nos gris
+portent l'orthographe britannique `grey`, reprise de Figma.
+
+Les tokens sont déclarés en CSS dans `app/assets/css/main.css`, sous
+`@theme` — Tailwind 4 n'utilise plus de fichier `tailwind.config.js`.
 
 ## Structure
 
@@ -73,7 +77,7 @@ app/
     icons/    icônes inline
   pages/      une page par route
   layouts/    default.vue
-  assets/css/ main.css (directives Tailwind + couche de base)
+  assets/css/ main.css (thème Tailwind, tokens et couche de base)
   app.vue     coque applicative
   error.vue   404 et erreurs serveur
 public/       assets servis tels quels (icônes, images)

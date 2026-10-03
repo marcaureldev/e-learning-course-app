@@ -65,7 +65,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         <NuxtLink
           to="/"
           aria-label="Online Courses — home"
-          class="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50"
+          class="rounded-lg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
         >
           <NuxtImg
             src="/icons/logo-icon.svg"
@@ -83,7 +83,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
             <NuxtLink
               :to="item.link"
               :aria-current="isActive(item.link) ? 'page' : undefined"
-              class="rounded-lg px-4 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50"
+              class="rounded-lg px-4 py-2 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
               :class="isActive(item.link) ? 'bg-white-95 text-grey-10' : 'text-grey-30 hover:text-grey-10'"
             >
               {{ item.name }}
@@ -110,7 +110,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         <button
           ref="burgerRef"
           type="button"
-          class="rounded-lg p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50 lg:hidden"
+          class="rounded-lg p-1 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 lg:hidden"
           aria-label="Open menu"
           aria-controls="mobile-menu"
           :aria-expanded="open"
@@ -144,7 +144,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         <button
           ref="closeRef"
           type="button"
-          class="rounded-lg p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50"
+          class="rounded-lg p-1 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
           aria-label="Close menu"
           @click="closeMenu"
         >
@@ -159,7 +159,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           <NuxtLink
             :to="item.link"
             :aria-current="isActive(item.link) ? 'page' : undefined"
-            class="rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50"
+            class="rounded-lg transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
             :class="isActive(item.link) ? 'text-orange-50' : 'text-grey-20 hover:text-orange-50'"
           >
             {{ item.name }}

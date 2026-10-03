@@ -40,7 +40,7 @@ const sizeClasses: Record<Size, string> = {
     :to="props.to"
     :type="props.to ? undefined : props.type"
     :disabled="props.to ? undefined : props.disabled"
-    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
     :class="[variantClasses[props.variant], sizeClasses[props.size]]"
   >
     <slot />

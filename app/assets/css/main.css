@@ -1,6 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/*
+ * Tokens de design, reproduits à l'identique des variables de la maquette Figma
+ * (convention `Famille/Luminosité`), afin qu'une valeur lue dans le design se
+ * traduise sans ambiguïté en classe utilitaire : `Grey/30` -> `text-grey-30`.
+ *
+ * ATTENTION : cette convention est l'inverse de celle de Tailwind. Ici `50`
+ * désigne la teinte médiane (l'orange de marque), pas la plus claire.
+ */
+@theme {
+  --color-orange-50: #ff9500;
+  --color-orange-90: #ffeacc;
+  --color-orange-95: #fff4e5;
+  --color-orange-97: #fff9f0;
+
+  --color-grey-10: #1a1a1a;
+  --color-grey-15: #262626;
+  --color-grey-20: #333333;
+  --color-grey-30: #4c4c4c;
+  --color-grey-35: #59595a;
+  --color-grey-40: #656567;
+
+  --color-white-95: #f1f1f3;
+  --color-white-97: #f7f7f8;
+  --color-white-99: #fcfcfd;
+
+  --font-sans:
+    "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Largeur du conteneur de la maquette au point de rupture desktop.
+     Le namespace `--container-*` alimente les utilitaires `max-w-*`. */
+  --container-container: 1596px;
+
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* Tailwind 4 n'expose pas de namespace de thème pour les images de fond. */
+@utility bg-main-learn {
+  background-image: url("/images/main-learn-img.svg");
+}
 
 @layer base {
   html {
@@ -9,6 +57,12 @@
 
   body {
     @apply min-h-full bg-white-97 font-sans text-grey-10;
+  }
+
+  /* Tailwind 4 rend les boutons `cursor: default` ; on restaure le pointeur. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 
