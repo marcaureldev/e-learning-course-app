@@ -20,13 +20,14 @@ pnpm dev        # http://localhost:3000
 
 ## Scripts
 
-| Commande         | Rôle                               |
-| ---------------- | ---------------------------------- |
-| `pnpm dev`       | serveur de développement           |
-| `pnpm build`     | build de production                |
-| `pnpm preview`   | prévisualise le build              |
-| `pnpm lint`      | ESLint (`lint:fix` pour corriger)  |
-| `pnpm typecheck` | vérification des types (`vue-tsc`) |
+| Commande         | Rôle                                    |
+| ---------------- | --------------------------------------- |
+| `pnpm dev`       | serveur de développement                |
+| `pnpm build`     | build de production                     |
+| `pnpm preview`   | prévisualise le build                   |
+| `pnpm lint`      | ESLint (`lint:fix` pour corriger)       |
+| `pnpm format`    | Prettier (`format:check` pour vérifier) |
+| `pnpm typecheck` | vérification des types (`vue-tsc`)      |
 
 ## Convention de commits
 
@@ -42,6 +43,19 @@ Types admis : `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`,
 `revert`, `style`, `test`. L'en-tête ne dépasse pas 100 caractères.
 
 Le hook s'installe tout seul : `pnpm install` déclenche le script `prepare`.
+
+## Formatage
+
+Prettier formate le code ; ESLint ne garde que les règles de correction, ses
+règles stylistiques étant désactivées pour éviter les conflits.
+`prettier-plugin-tailwindcss` trie les classes utilitaires.
+
+> [!NOTE]
+> Les valeurs utilisent l'échelle Tailwind dès qu'elle les exprime : `gap-75`
+> plutôt que `gap-[300px]`, `text-lg` plutôt que `text-[18px]`. L'échelle
+> d'espacement accepte les décimales (`p-12.5` vaut 50 px), mais pas celle des
+> rayons, limitée à 4, 6, 8, 12 et 16 px. Les quelques valeurs de la maquette
+> hors de ces échelles restent en notation arbitraire.
 
 ## Convention de couleurs
 
