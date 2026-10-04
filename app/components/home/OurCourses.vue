@@ -75,13 +75,13 @@ const courses: Course[] = [
 </script>
 
 <template>
-  <section class="flex flex-col gap-10 lg:gap-[60px] 3xl:gap-[80px]">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-[250px] 3xl:gap-[300px]">
-      <div class="flex flex-1 flex-col gap-[4px] 3xl:gap-[6px]">
-        <h2 class="text-3xl font-semibold leading-[1.5] text-grey-15 lg:text-[38px] 3xl:text-[48px]">
+  <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
+    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
+      <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
+        <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
           Our Courses
         </h2>
-        <p class="text-sm leading-[1.5] text-grey-35 lg:text-[16px] 3xl:text-[18px]">
+        <p class="text-sm leading-normal text-grey-35 lg:text-[16px] 3xl:text-[18px]">
           Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
           Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
         </p>
@@ -96,14 +96,14 @@ const courses: Course[] = [
       </UiButton>
     </div>
 
-    <ul class="grid gap-[20px] lg:grid-cols-2 3xl:gap-[30px]">
+    <ul class="grid gap-5 lg:grid-cols-2 3xl:gap-7.5">
       <li
         v-for="course in courses"
         :key="course.title"
-        class="flex flex-col justify-between gap-[24px] rounded-[10px] border border-white-95 bg-white p-6 lg:p-[40px] 3xl:gap-[30px] 3xl:rounded-xl 3xl:p-[50px]"
+        class="flex flex-col justify-between gap-6 rounded-[10px] border border-white-95 bg-white p-6 lg:p-10 3xl:gap-7.5 3xl:rounded-xl 3xl:p-12.5"
       >
-        <div class="flex flex-col gap-[24px] 3xl:gap-[30px]">
-          <div class="relative h-[200px] w-full overflow-hidden rounded-lg lg:h-[266px] 3xl:h-[380px]">
+        <div class="flex flex-col gap-6 3xl:gap-7.5">
+          <div class="relative h-50 w-full overflow-hidden rounded-lg lg:h-66.5 3xl:h-95">
             <NuxtImg
               :src="course.image"
               :alt="`Illustration for ${course.title}`"
@@ -115,13 +115,13 @@ const courses: Course[] = [
             />
           </div>
 
-          <div class="flex flex-col gap-[24px] 3xl:gap-[30px]">
+          <div class="flex flex-col gap-6 3xl:gap-7.5">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <div class="flex gap-[10px]">
+              <div class="flex gap-2.5">
                 <span
                   v-for="tag in [course.duration, course.level]"
                   :key="tag"
-                  class="rounded-md border border-white-95 bg-white px-[14px] py-[8px] text-sm text-grey-30 3xl:rounded-lg 3xl:px-[16px] 3xl:py-[10px] 3xl:text-[18px]"
+                  class="rounded-md border border-white-95 bg-white px-3.5 py-2 text-sm text-grey-30 3xl:rounded-lg 3xl:px-4 3xl:py-2.5 3xl:text-[18px]"
                 >
                   {{ tag }}
                 </span>
@@ -131,11 +131,11 @@ const courses: Course[] = [
               </p>
             </div>
 
-            <div class="flex flex-col gap-[10px] 3xl:gap-[14px]">
-              <h3 class="text-xl font-semibold leading-[1.5] text-grey-15 3xl:text-[24px]">
+            <div class="flex flex-col gap-2.5 3xl:gap-3.5">
+              <h3 class="text-xl font-semibold leading-normal text-grey-15 3xl:text-[24px]">
                 {{ course.title }}
               </h3>
-              <p class="text-sm leading-[1.5] text-grey-30 lg:text-[16px] 3xl:text-[18px]">
+              <p class="text-sm leading-normal text-grey-30 lg:text-[16px] 3xl:text-[18px]">
                 {{ course.description }}
               </p>
             </div>
