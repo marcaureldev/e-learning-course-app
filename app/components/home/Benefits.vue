@@ -33,13 +33,13 @@ const benefits: Benefit[] = [
 </script>
 
 <template>
-  <section class="flex flex-col gap-10 lg:gap-[80px]">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-20 2xl:gap-[300px]">
-      <div class="flex flex-1 flex-col gap-[6px]">
-        <h2 class="text-3xl font-semibold leading-[1.5] text-grey-15 lg:text-[48px]">
+  <section class="flex flex-col gap-10 lg:gap-[60px] 3xl:gap-[80px]">
+    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-[250px] 3xl:gap-[300px]">
+      <div class="flex flex-1 flex-col gap-[4px] 3xl:gap-[6px]">
+        <h2 class="text-3xl font-semibold leading-[1.5] text-grey-15 lg:text-[38px] 3xl:text-[48px]">
           Benefits
         </h2>
-        <p class="text-sm leading-[1.5] text-grey-35 lg:text-[18px]">
+        <p class="text-sm leading-[1.5] text-grey-35 lg:text-[16px] 3xl:text-[18px]">
           Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
           Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
         </p>
@@ -58,23 +58,23 @@ const benefits: Benefit[] = [
       <li
         v-for="(benefit, index) in benefits"
         :key="benefit.title"
-        class="flex flex-col items-end gap-8 rounded-xl bg-white p-6 lg:gap-[50px] lg:p-[50px]"
+        class="flex flex-col items-end gap-8 rounded-[10px] bg-white p-6 lg:gap-[40px] lg:p-[40px] 3xl:gap-[50px] 3xl:rounded-xl 3xl:p-[50px]"
       >
-        <p class="w-full text-right text-5xl font-bold leading-none text-grey-15 lg:text-[80px]">
+        <p class="w-full text-right text-5xl font-bold leading-none text-grey-15 lg:text-[60px] 3xl:text-[80px]">
           {{ String(index + 1).padStart(2, '0') }}
         </p>
 
-        <div class="flex w-full flex-col gap-[14px]">
-          <h3 class="text-xl font-semibold leading-[1.5] tracking-[-0.144px] text-grey-20 lg:text-[24px]">
+        <div class="flex w-full flex-col gap-[10px] 3xl:gap-[14px]">
+          <h3 class="text-xl font-semibold leading-[1.5] tracking-[-0.12px] text-grey-20 lg:text-[20px] 3xl:tracking-[-0.144px] 3xl:text-[24px]">
             {{ benefit.title }}
           </h3>
-          <p class="text-sm leading-[1.5] text-grey-30 lg:text-[18px]">
+          <p class="text-sm leading-[1.5] text-grey-30 lg:text-[16px] 3xl:text-[18px]">
             {{ benefit.description }}
           </p>
         </div>
 
         <span
-          class="flex rounded-lg border border-white-95 bg-white-99 p-4 lg:p-[20px]"
+          class="flex rounded-md border border-white-95 bg-white-99 p-[14px] 3xl:rounded-lg 3xl:p-[20px]"
           aria-hidden="true"
         >
           <NuxtImg
@@ -82,7 +82,7 @@ const benefits: Benefit[] = [
             alt=""
             width="34"
             height="34"
-            class="size-6 lg:size-[34px]"
+            class="size-6 lg:size-[26px] 3xl:size-[34px]"
           />
         </span>
       </li>

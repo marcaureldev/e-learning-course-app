@@ -27,13 +27,13 @@ const variantClasses: Record<Variant, string> = {
   ghost: 'text-grey-30 hover:bg-white-95 hover:text-grey-10',
 }
 
-// `md` et `lg` reprennent les deux gabarits de bouton de la maquette - celui du
-// Login dans la navbar et ceux du hero - réduits sous le point de rupture `sm`,
-// où la maquette mobile resserre les boutons.
+// `md` est le gabarit du Login dans la navbar, `lg` celui des boutons de
+// section. La maquette leur donne les mêmes valeurs en mobile et en laptop, et
+// ne les agrandit qu'au palier desktop.
 const sizeClasses: Record<Size, string> = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-2.5 text-sm sm:px-[34px] sm:py-[14px] sm:text-[18px]',
-  lg: 'px-5 py-3 text-sm sm:px-[24px] sm:py-[18px] sm:text-[18px]',
+  sm: 'rounded-md px-4 py-2 text-sm',
+  md: 'rounded-md px-6 py-3 text-sm 3xl:rounded-lg 3xl:px-[34px] 3xl:py-[14px] 3xl:text-[18px]',
+  lg: 'rounded-md px-5 py-3.5 text-sm 3xl:rounded-lg 3xl:px-[24px] 3xl:py-[18px] 3xl:text-[18px]',
 }
 </script>
 
@@ -43,7 +43,7 @@ const sizeClasses: Record<Size, string> = {
     :to="props.to"
     :type="props.to ? undefined : props.type"
     :disabled="props.to ? undefined : props.disabled"
-    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg leading-normal transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap leading-normal transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
     :class="[variantClasses[props.variant], sizeClasses[props.size]]"
   >
     <slot />

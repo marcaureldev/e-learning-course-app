@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
   <div>
     <UiContainer>
       <nav
-        class="flex items-center justify-between border-b border-white-95 pb-[24px] pt-[20px]"
+        class="flex items-center justify-between border-b border-white-95 pb-[20px] pt-[16px] 3xl:pb-[24px] 3xl:pt-[20px]"
         aria-label="Main"
       >
         <div class="flex items-center gap-6 lg:gap-[50px]">
@@ -72,11 +72,11 @@ onBeforeUnmount(() => {
               aria-hidden="true"
               width="54"
               height="54"
-              class="size-11 lg:size-[54px]"
+              class="size-11 3xl:size-[54px]"
             />
           </NuxtLink>
 
-          <ul class="hidden items-center gap-[26px] text-[18px] text-grey-15 lg:flex">
+          <ul class="hidden items-center gap-[26px] text-sm text-grey-15 lg:flex 3xl:text-[18px]">
             <li
               v-for="item in navItems"
               :key="item.name"
@@ -85,7 +85,7 @@ onBeforeUnmount(() => {
                 :to="item.link"
                 :aria-current="isActive(item.link) ? 'page' : undefined"
                 class="rounded-lg transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50"
-                :class="isActive(item.link) ? 'bg-white-95 px-[24px] py-[14px]' : 'hover:text-orange-50'"
+                :class="isActive(item.link) ? 'rounded-md bg-white-95 px-[20px] py-[12px] 3xl:rounded-lg 3xl:px-[24px] 3xl:py-[14px]' : 'hover:text-orange-50'"
               >
                 {{ item.name }}
               </NuxtLink>
@@ -96,7 +96,7 @@ onBeforeUnmount(() => {
         <div class="flex items-center gap-4 lg:gap-[30px]">
           <NuxtLink
             to="/signup"
-            class="hidden rounded-lg text-[18px] text-grey-15 transition-colors hover:text-orange-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 sm:block"
+            class="hidden rounded-lg text-sm text-grey-15 transition-colors hover:text-orange-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 sm:block 3xl:text-[18px]"
           >
             Sign Up
           </NuxtLink>
@@ -154,7 +154,7 @@ onBeforeUnmount(() => {
           <IconsClose />
         </button>
       </div>
-      <ul class="flex flex-col space-y-6 text-[18px]">
+      <ul class="flex flex-col space-y-6 text-sm 3xl:text-[18px]">
         <li
           v-for="item in navItems"
           :key="item.name"
