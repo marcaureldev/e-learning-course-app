@@ -18,7 +18,8 @@ const items: FaqItem[] = [
       'Instructors answer questions in the course forum and review your assignments with written feedback.',
   },
   {
-    question: 'Are the courses self-paced or do they have specific start and end dates?',
+    question:
+      'Are the courses self-paced or do they have specific start and end dates?',
     answer:
       'Every course is self-paced. You keep lifetime access once enrolled and progress on your own schedule.',
   },
@@ -29,7 +30,8 @@ const items: FaqItem[] = [
   },
   {
     question: 'Can I download the course materials for offline access?',
-    answer: 'Yes. Course materials can be downloaded and consulted offline at any time.',
+    answer:
+      'Yes. Course materials can be downloaded and consulted offline at any time.',
   },
 ]
 
@@ -44,16 +46,23 @@ const toggle = (index: number) => {
   <section
     class="flex flex-col gap-10 rounded-xl bg-white p-6 lg:flex-row lg:gap-20 lg:p-20 3xl:gap-30 3xl:p-25"
   >
-    <div class="flex flex-col items-start gap-8 lg:w-102 lg:shrink-0 lg:gap-10 3xl:gap-12.5">
+    <div
+      class="flex flex-col items-start gap-8 lg:w-102 lg:shrink-0 lg:gap-10 3xl:gap-12.5"
+    >
       <div class="flex w-full flex-col gap-2 lg:gap-2 3xl:gap-2.5">
-        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
+        <h2
+          class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl"
+        >
           Frequently Asked Questions
         </h2>
         <p class="text-sm leading-normal text-grey-20 lg:text-base 3xl:text-lg">
-          Still you have any questions? Contact our Team via support@skillbridge.com
+          Still you have any questions? Contact our Team via
+          support@skillbridge.com
         </p>
       </div>
-      <UiButton to="/contact" variant="secondary" size="lg"> See All FAQ&rsquo;s </UiButton>
+      <UiButton to="/contact" variant="secondary" size="lg">
+        See All FAQ&rsquo;s
+      </UiButton>
     </div>
 
     <ul class="flex min-w-0 flex-1 flex-col gap-5 lg:gap-7.5">
@@ -69,7 +78,9 @@ const toggle = (index: number) => {
       >
         <h3
           class="flex items-center gap-6 lg:gap-10 3xl:gap-12.5"
-          :class="openIndex === index ? 'border-b border-white-95 pb-4 lg:pb-6' : ''"
+          :class="
+            openIndex === index ? 'border-b border-white-95 pb-4 lg:pb-6' : ''
+          "
         >
           <button
             type="button"
@@ -82,7 +93,9 @@ const toggle = (index: number) => {
             <span class="flex shrink-0 rounded-lg bg-orange-95 p-2.5 3xl:p-3">
               <NuxtImg
                 :src="
-                  openIndex === index ? '/icons/faq-close-icon.svg' : '/icons/faq-open-icon.svg'
+                  openIndex === index
+                    ? '/icons/faq-close-icon.svg'
+                    : '/icons/faq-open-icon.svg'
                 "
                 :alt="openIndex === index ? 'Collapse answer' : 'Expand answer'"
                 width="28"
@@ -109,7 +122,9 @@ const toggle = (index: number) => {
             to="/courses"
             class="flex items-center gap-4 rounded-lg border border-white-95 bg-white-97 px-5 py-4 transition-colors hover:bg-white-95 focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden lg:px-6 lg:py-4 3xl:px-7.5 3xl:py-5"
           >
-            <span class="flex-1 text-base leading-normal font-medium text-grey-20 3xl:text-lg">
+            <span
+              class="flex-1 text-base leading-normal font-medium text-grey-20 3xl:text-lg"
+            >
               {{ item.relatedLink }}
             </span>
             <span class="flex shrink-0 rounded-full bg-white p-3 3xl:p-3.5">

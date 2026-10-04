@@ -7,7 +7,8 @@ interface Benefit {
 const benefits: Benefit[] = [
   {
     title: 'Flexible Learning Schedule',
-    description: 'Fit your coursework around your existing commitments and obligations.',
+    description:
+      'Fit your coursework around your existing commitments and obligations.',
   },
   {
     title: 'Expert Instruction',
@@ -16,7 +17,8 @@ const benefits: Benefit[] = [
   },
   {
     title: 'Diverse Course Offerings',
-    description: 'Explore a wide range of design and development courses covering various topics.',
+    description:
+      'Explore a wide range of design and development courses covering various topics.',
   },
   {
     title: 'Updated Curriculum',
@@ -25,7 +27,8 @@ const benefits: Benefit[] = [
   },
   {
     title: 'Practical Projects and Assignments',
-    description: 'Develop a portfolio showcasing your skills and abilities to potential employers.',
+    description:
+      'Develop a portfolio showcasing your skills and abilities to potential employers.',
   },
   {
     title: 'Interactive Learning Environment',
@@ -37,18 +40,24 @@ const benefits: Benefit[] = [
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
+    <div
+      class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75"
+    >
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
+        <h2
+          class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl"
+        >
           Benefits
         </h2>
         <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
-          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
-          senectus in.
+          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
+          elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget
+          habitasse in velit fringilla feugiat senectus in.
         </p>
       </div>
-      <UiButton to="/courses" variant="soft" size="lg" class="shrink-0"> View All </UiButton>
+      <UiButton to="/courses" variant="soft" size="lg" class="shrink-0">
+        View All
+      </UiButton>
     </div>
 
     <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -69,7 +78,9 @@ const benefits: Benefit[] = [
           >
             {{ benefit.title }}
           </h3>
-          <p class="text-sm leading-normal text-grey-30 lg:text-base 3xl:text-lg">
+          <p
+            class="text-sm leading-normal text-grey-30 lg:text-base 3xl:text-lg"
+          >
             {{ benefit.description }}
           </p>
         </div>

@@ -27,9 +27,21 @@ const columns: FooterColumn[] = [
 // La maquette ne fournit aucune URL de compte : ces adresses pointent vers la
 // racine de chaque plateforme et sont à remplacer par les comptes réels.
 const socials = [
-  { name: 'Facebook', icon: '/icons/facebook-icon.svg', href: 'https://facebook.com' },
-  { name: 'Twitter', icon: '/icons/twitter-icon.svg', href: 'https://twitter.com' },
-  { name: 'LinkedIn', icon: '/icons/linkedin-icon.svg', href: 'https://linkedin.com' },
+  {
+    name: 'Facebook',
+    icon: '/icons/facebook-icon.svg',
+    href: 'https://facebook.com',
+  },
+  {
+    name: 'Twitter',
+    icon: '/icons/twitter-icon.svg',
+    href: 'https://twitter.com',
+  },
+  {
+    name: 'LinkedIn',
+    icon: '/icons/linkedin-icon.svg',
+    href: 'https://linkedin.com',
+  },
 ]
 
 const contacts = [
@@ -38,16 +50,28 @@ const contacts = [
     label: 'hello@skillbridge.com',
     href: 'mailto:hello@skillbridge.com',
   },
-  { icon: '/icons/phone-icon.svg', label: '+91 91813 23 2309', href: 'tel:+9191813232309' },
-  { icon: '/icons/location-icon.svg', label: 'Somewhere in the World', href: undefined },
+  {
+    icon: '/icons/phone-icon.svg',
+    label: '+91 91813 23 2309',
+    href: 'tel:+9191813232309',
+  },
+  {
+    icon: '/icons/location-icon.svg',
+    label: 'Somewhere in the World',
+    href: undefined,
+  },
 ]
 </script>
 
 <template>
-  <footer class="mt-12 bg-white pt-12 pb-7.5 lg:mt-15 lg:pt-20 3xl:mt-25 3xl:pt-25">
+  <footer
+    class="mt-12 bg-white pt-12 pb-7.5 lg:mt-15 lg:pt-20 3xl:mt-25 3xl:pt-25"
+  >
     <UiContainer>
       <div class="flex flex-col gap-10 lg:gap-12.5">
-        <div class="flex flex-col justify-between gap-10 lg:flex-row lg:items-start">
+        <div
+          class="flex flex-col justify-between gap-10 lg:flex-row lg:items-start"
+        >
           <div class="flex flex-col gap-8 lg:gap-10">
             <NuxtImg
               src="/icons/logo-icon.svg"
@@ -63,7 +87,9 @@ const contacts = [
                   :is="contact.href ? 'a' : 'span'"
                   :href="contact.href"
                   class="flex items-center gap-1.5 rounded-md text-base leading-normal text-grey-15 3xl:text-lg"
-                  :class="contact.href ? 'transition-colors hover:text-orange-50' : ''"
+                  :class="
+                    contact.href ? 'transition-colors hover:text-orange-50' : ''
+                  "
                 >
                   <NuxtImg
                     :src="contact.icon"
@@ -86,7 +112,9 @@ const contacts = [
               class="flex flex-1 flex-col gap-3.5"
               :aria-label="column.title"
             >
-              <h2 class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl">
+              <h2
+                class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl"
+              >
                 {{ column.title }}
               </h2>
               <ul class="flex flex-col gap-2">
@@ -102,7 +130,9 @@ const contacts = [
             </nav>
 
             <div class="flex flex-1 flex-col gap-3.5">
-              <h2 class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl">
+              <h2
+                class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl"
+              >
                 Social Profiles
               </h2>
               <ul class="flex gap-3.5">
@@ -131,7 +161,9 @@ const contacts = [
 
         <hr class="border-white-95" />
 
-        <p class="text-center text-base leading-normal text-grey-40 3xl:text-lg">
+        <p
+          class="text-center text-base leading-normal text-grey-40 3xl:text-lg"
+        >
           &copy; 2023 Skillbridge. All rights reserved.
         </p>
       </div>

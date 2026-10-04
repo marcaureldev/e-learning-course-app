@@ -26,7 +26,10 @@ const plans: Plan[] = [
       { label: 'Basic community support.', included: true },
       { label: 'No certification upon completion.', included: true },
       { label: 'Ad-supported platform.', included: true },
-      { label: 'Access to exclusive Pro Plan community forums.', included: false },
+      {
+        label: 'Access to exclusive Pro Plan community forums.',
+        included: false,
+      },
       { label: 'Early access to new courses and updates.', included: false },
     ],
   },
@@ -39,7 +42,10 @@ const plans: Plan[] = [
       { label: 'Priority support from instructors.', included: true },
       { label: 'Course completion certificates.', included: true },
       { label: 'Ad-free experience.', included: true },
-      { label: 'Access to exclusive Pro Plan community forums.', included: true },
+      {
+        label: 'Access to exclusive Pro Plan community forums.',
+        included: true,
+      },
       { label: 'Early access to new courses and updates.', included: true },
     ],
   },
@@ -48,22 +54,30 @@ const plans: Plan[] = [
 const billing = ref<Billing>('monthly')
 
 const priceFor = (plan: Plan) =>
-  billing.value === 'monthly' ? plan.monthlyPrice : plan.monthlyPrice * YEARLY_MONTHS_BILLED
+  billing.value === 'monthly'
+    ? plan.monthlyPrice
+    : plan.monthlyPrice * YEARLY_MONTHS_BILLED
 
-const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year'))
+const period = computed(() =>
+  billing.value === 'monthly' ? '/month' : '/year',
+)
 </script>
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
+    <div
+      class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75"
+    >
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
+        <h2
+          class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl"
+        >
           Our Pricing
         </h2>
         <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
-          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
-          senectus in.
+          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
+          elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget
+          habitasse in velit fringilla feugiat senectus in.
         </p>
       </div>
 
@@ -78,7 +92,9 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
           type="button"
           class="rounded-md px-6 py-3 text-sm font-medium capitalize transition-colors focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden 3xl:px-7.5 3xl:py-3.5 3xl:text-lg"
           :class="
-            billing === option ? 'bg-orange-50 text-white' : 'text-grey-30 hover:text-grey-15'
+            billing === option
+              ? 'bg-orange-50 text-white'
+              : 'text-grey-30 hover:text-grey-15'
           "
           :aria-pressed="billing === option"
           @click="billing = option"
@@ -103,10 +119,13 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
         </h3>
 
         <p class="flex w-full items-end justify-center leading-[0.73]">
-          <span class="text-5xl font-semibold text-grey-15 lg:text-6xl 3xl:text-[80px]"
+          <span
+            class="text-5xl font-semibold text-grey-15 lg:text-6xl 3xl:text-[80px]"
             >${{ priceFor(plan) }}</span
           >
-          <span class="text-base font-medium text-grey-30 3xl:text-xl">{{ period }}</span>
+          <span class="text-base font-medium text-grey-30 3xl:text-xl">{{
+            period
+          }}</span>
         </p>
 
         <div class="flex w-full flex-col">
@@ -126,10 +145,16 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
               >
                 <span
                   class="flex shrink-0 rounded-sm p-1 3xl:rounded-md 3xl:p-1.5"
-                  :class="feature.included ? 'bg-orange-95' : 'border border-white-95'"
+                  :class="
+                    feature.included ? 'bg-orange-95' : 'border border-white-95'
+                  "
                 >
                   <NuxtImg
-                    :src="feature.included ? '/icons/check-icon.svg' : '/icons/cross-icon.svg'"
+                    :src="
+                      feature.included
+                        ? '/icons/check-icon.svg'
+                        : '/icons/cross-icon.svg'
+                    "
                     :alt="feature.included ? 'Included' : 'Not included'"
                     width="20"
                     height="20"

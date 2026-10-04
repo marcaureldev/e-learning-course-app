@@ -34,7 +34,9 @@
       <div
         class="flex w-full flex-col items-center gap-1.5 px-7.5 text-grey-15 lg:px-0 3xl:gap-2.5"
       >
-        <p class="text-2xl leading-normal font-medium lg:text-[28px] 3xl:text-[38px]">
+        <p
+          class="text-2xl leading-normal font-medium lg:text-[28px] 3xl:text-[38px]"
+        >
           with Online Design and Development Courses.
         </p>
         <p class="text-sm leading-normal lg:text-base 3xl:text-lg">
@@ -44,8 +46,12 @@
     </div>
 
     <div class="flex items-start gap-3">
-      <UiButton to="/courses" variant="primary" size="lg"> Explore Courses </UiButton>
-      <UiButton to="/pricing" variant="secondary" size="lg"> View Pricing </UiButton>
+      <UiButton to="/courses" variant="primary" size="lg">
+        Explore Courses
+      </UiButton>
+      <UiButton to="/pricing" variant="secondary" size="lg">
+        View Pricing
+      </UiButton>
     </div>
   </section>
 </template>

@@ -82,18 +82,24 @@ const courses: Course[] = [
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
+    <div
+      class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75"
+    >
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
+        <h2
+          class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl"
+        >
           Our Courses
         </h2>
         <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
-          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
-          senectus in.
+          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
+          elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget
+          habitasse in velit fringilla feugiat senectus in.
         </p>
       </div>
-      <UiButton to="/courses" variant="soft" size="lg" class="shrink-0"> View All </UiButton>
+      <UiButton to="/courses" variant="soft" size="lg" class="shrink-0">
+        View All
+      </UiButton>
     </div>
 
     <ul class="grid gap-5 lg:grid-cols-2 3xl:gap-7.5">
@@ -103,7 +109,9 @@ const courses: Course[] = [
         class="flex flex-col justify-between gap-6 rounded-[10px] border border-white-95 bg-white p-6 lg:p-10 3xl:gap-7.5 3xl:rounded-xl 3xl:p-12.5"
       >
         <div class="flex flex-col gap-6 3xl:gap-7.5">
-          <div class="relative h-50 w-full overflow-hidden rounded-lg lg:h-66.5 3xl:h-95">
+          <div
+            class="relative h-50 w-full overflow-hidden rounded-lg lg:h-66.5 3xl:h-95"
+          >
             <NuxtImg
               :src="course.image"
               :alt="`Illustration for ${course.title}`"
@@ -126,23 +134,31 @@ const courses: Course[] = [
                   {{ tag }}
                 </span>
               </div>
-              <p class="text-base font-medium whitespace-nowrap text-grey-15 3xl:text-xl">
+              <p
+                class="text-base font-medium whitespace-nowrap text-grey-15 3xl:text-xl"
+              >
                 By {{ course.author }}
               </p>
             </div>
 
             <div class="flex flex-col gap-2.5 3xl:gap-3.5">
-              <h3 class="text-xl leading-normal font-semibold text-grey-15 3xl:text-2xl">
+              <h3
+                class="text-xl leading-normal font-semibold text-grey-15 3xl:text-2xl"
+              >
                 {{ course.title }}
               </h3>
-              <p class="text-sm leading-normal text-grey-30 lg:text-base 3xl:text-lg">
+              <p
+                class="text-sm leading-normal text-grey-30 lg:text-base 3xl:text-lg"
+              >
                 {{ course.description }}
               </p>
             </div>
           </div>
         </div>
 
-        <UiButton to="/courses" variant="card" size="lg" class="w-full"> Get it Now </UiButton>
+        <UiButton to="/courses" variant="card" size="lg" class="w-full">
+          Get it Now
+        </UiButton>
       </li>
     </ul>
   </section>

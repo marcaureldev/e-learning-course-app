@@ -27,7 +27,9 @@ useSeoMeta({
               : 'An unexpected error occurred. Please try again in a moment.'
           }}
         </p>
-        <UiButton to="/" variant="primary" size="lg" class="mt-8"> Back to home </UiButton>
+        <UiButton to="/" variant="primary" size="lg" class="mt-8">
+          Back to home
+        </UiButton>
       </section>
     </UiContainer>
   </NuxtLayout>

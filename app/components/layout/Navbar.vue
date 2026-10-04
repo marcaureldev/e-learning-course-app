@@ -79,7 +79,9 @@ onBeforeUnmount(() => {
             />
           </NuxtLink>
 
-          <ul class="hidden items-center gap-6.5 text-sm text-grey-15 lg:flex 3xl:text-lg">
+          <ul
+            class="hidden items-center gap-6.5 text-sm text-grey-15 lg:flex 3xl:text-lg"
+          >
             <li v-for="item in navItems" :key="item.name">
               <NuxtLink
                 :to="item.link"
@@ -158,7 +160,11 @@ onBeforeUnmount(() => {
             :to="item.link"
             :aria-current="isActive(item.link) ? 'page' : undefined"
             class="rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden"
-            :class="isActive(item.link) ? 'text-orange-50' : 'text-grey-15 hover:text-orange-50'"
+            :class="
+              isActive(item.link)
+                ? 'text-orange-50'
+                : 'text-grey-15 hover:text-orange-50'
+            "
           >
             {{ item.name }}
           </NuxtLink>
@@ -166,6 +172,10 @@ onBeforeUnmount(() => {
       </ul>
     </div>
 
-    <div v-if="open" class="fixed inset-0 z-40 bg-black/50 lg:hidden" @click="closeMenu" />
+    <div
+      v-if="open"
+      class="fixed inset-0 z-40 bg-black/50 lg:hidden"
+      @click="closeMenu"
+    />
   </div>
 </template>

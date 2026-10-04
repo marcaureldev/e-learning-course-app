@@ -35,18 +35,24 @@ const testimonials: Testimonial[] = [
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
+    <div
+      class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75"
+    >
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
+        <h2
+          class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl"
+        >
           Our Testimonials
         </h2>
         <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
-          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
-          senectus in.
+          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
+          elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget
+          habitasse in velit fringilla feugiat senectus in.
         </p>
       </div>
-      <UiButton to="/about" variant="soft" size="lg" class="shrink-0"> View All </UiButton>
+      <UiButton to="/about" variant="soft" size="lg" class="shrink-0">
+        View All
+      </UiButton>
     </div>
 
     <ul class="grid gap-5 lg:grid-cols-2 3xl:gap-7.5">
@@ -76,7 +82,9 @@ const testimonials: Testimonial[] = [
               quality="80"
               class="size-12.5 shrink-0 rounded-md object-cover 3xl:size-15 3xl:rounded-lg"
             />
-            <p class="min-w-0 truncate text-base font-semibold text-grey-20 3xl:text-lg">
+            <p
+              class="min-w-0 truncate text-base font-semibold text-grey-20 3xl:text-lg"
+            >
               {{ testimonial.author }}
             </p>
           </div>
