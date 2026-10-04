@@ -21,18 +21,13 @@ useSeoMeta({
           {{ isNotFound ? 'Page not found' : 'Something went wrong' }}
         </h1>
         <p class="mt-4 max-w-prose text-sm text-grey-30">
-          {{ isNotFound
-            ? "The page you're looking for doesn't exist or has been moved."
-            : 'An unexpected error occurred. Please try again in a moment.' }}
+          {{
+            isNotFound
+              ? "The page you're looking for doesn't exist or has been moved."
+              : 'An unexpected error occurred. Please try again in a moment.'
+          }}
         </p>
-        <UiButton
-          to="/"
-          variant="primary"
-          size="lg"
-          class="mt-8"
-        >
-          Back to home
-        </UiButton>
+        <UiButton to="/" variant="primary" size="lg" class="mt-8"> Back to home </UiButton>
       </section>
     </UiContainer>
   </NuxtLayout>

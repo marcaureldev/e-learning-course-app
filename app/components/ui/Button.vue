@@ -2,19 +2,22 @@
 type Variant = 'primary' | 'secondary' | 'soft' | 'card' | 'ghost'
 type Size = 'sm' | 'md' | 'lg'
 
-const props = withDefaults(defineProps<{
-  to?: string
-  variant?: Variant
-  size?: Size
-  type?: 'button' | 'submit' | 'reset'
-  disabled?: boolean
-}>(), {
-  to: undefined,
-  variant: 'primary',
-  size: 'md',
-  type: 'button',
-  disabled: false,
-})
+const props = withDefaults(
+  defineProps<{
+    to?: string
+    variant?: Variant
+    size?: Size
+    type?: 'button' | 'submit' | 'reset'
+    disabled?: boolean
+  }>(),
+  {
+    to: undefined,
+    variant: 'primary',
+    size: 'md',
+    type: 'button',
+    disabled: false,
+  },
+)
 
 const NuxtLink = resolveComponent('NuxtLink')
 
@@ -33,8 +36,8 @@ const variantClasses: Record<Variant, string> = {
 // ne les agrandit qu'au palier desktop.
 const sizeClasses: Record<Size, string> = {
   sm: 'rounded-md px-4 py-2 text-sm',
-  md: 'rounded-md px-6 py-3 text-sm 3xl:rounded-lg 3xl:px-[34px] 3xl:py-[14px] 3xl:text-[18px]',
-  lg: 'rounded-md px-5 py-3.5 text-sm 3xl:rounded-lg 3xl:px-[24px] 3xl:py-[18px] 3xl:text-[18px]',
+  md: 'rounded-md px-6 py-3 text-sm 3xl:rounded-lg 3xl:px-8.5 3xl:py-3.5 3xl:text-lg',
+  lg: 'rounded-md px-5 py-3.5 text-sm 3xl:rounded-lg 3xl:px-6 3xl:py-4.5 3xl:text-lg',
 }
 </script>
 
@@ -44,7 +47,7 @@ const sizeClasses: Record<Size, string> = {
     :to="props.to"
     :type="props.to ? undefined : props.type"
     :disabled="props.to ? undefined : props.disabled"
-    class="inline-flex items-center justify-center gap-2 whitespace-nowrap leading-normal transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+    class="inline-flex items-center justify-center gap-2 leading-normal whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-60"
     :class="[variantClasses[props.variant], sizeClasses[props.size]]"
   >
     <slot />

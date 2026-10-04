@@ -57,12 +57,13 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
     <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
+        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
           Our Pricing
         </h2>
-        <p class="text-sm leading-normal text-grey-35 lg:text-[16px] 3xl:text-[18px]">
+        <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
           Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
+          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
+          senectus in.
         </p>
       </div>
 
@@ -72,11 +73,13 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
         aria-label="Billing period"
       >
         <button
-          v-for="option in (['monthly', 'yearly'] as Billing[])"
+          v-for="option in ['monthly', 'yearly'] as Billing[]"
           :key="option"
           type="button"
-          class="rounded-md px-6 py-3 text-sm font-medium capitalize transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 3xl:px-7.5 3xl:py-3.5 3xl:text-[18px]"
-          :class="billing === option ? 'bg-orange-50 text-white' : 'text-grey-30 hover:text-grey-15'"
+          class="rounded-md px-6 py-3 text-sm font-medium capitalize transition-colors focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden 3xl:px-7.5 3xl:py-3.5 3xl:text-lg"
+          :class="
+            billing === option ? 'bg-orange-50 text-white' : 'text-grey-30 hover:text-grey-15'
+          "
           :aria-pressed="billing === option"
           @click="billing = option"
         >
@@ -85,24 +88,34 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
       </div>
     </div>
 
-    <div class="flex flex-col gap-5 rounded-xl bg-white p-6 lg:flex-row lg:p-12.5 3xl:gap-7.5 3xl:p-20">
+    <div
+      class="flex flex-col gap-5 rounded-xl bg-white p-6 lg:flex-row lg:p-12.5 3xl:gap-7.5 3xl:p-20"
+    >
       <article
         v-for="plan in plans"
         :key="plan.name"
-        class="flex flex-1 flex-col items-center gap-8 rounded-xl border border-white-95 bg-white-99 px-4 pb-5 pt-8 lg:gap-12.5 lg:px-6 lg:pb-6 lg:pt-10 3xl:px-7.5 3xl:pb-7.5 3xl:pt-12.5"
+        class="flex flex-1 flex-col items-center gap-8 rounded-xl border border-white-95 bg-white-99 px-4 pt-8 pb-5 lg:gap-12.5 lg:px-6 lg:pt-10 lg:pb-6 3xl:px-7.5 3xl:pt-12.5 3xl:pb-7.5"
       >
-        <h3 class="flex w-full items-center justify-center rounded border border-orange-90 bg-orange-97 px-5.5 py-2.5 text-[18px] font-medium leading-normal text-grey-15 3xl:rounded-md 3xl:py-3 3xl:text-[22px]">
+        <h3
+          class="flex w-full items-center justify-center rounded border border-orange-90 bg-orange-97 px-5.5 py-2.5 text-lg leading-normal font-medium text-grey-15 3xl:rounded-md 3xl:py-3 3xl:text-[22px]"
+        >
           {{ plan.name }}
         </h3>
 
         <p class="flex w-full items-end justify-center leading-[0.73]">
-          <span class="text-5xl font-semibold text-grey-15 lg:text-[60px] 3xl:text-[80px]">${{ priceFor(plan) }}</span>
-          <span class="text-[16px] font-medium text-grey-30 3xl:text-[20px]">{{ period }}</span>
+          <span class="text-5xl font-semibold text-grey-15 lg:text-6xl 3xl:text-[80px]"
+            >${{ priceFor(plan) }}</span
+          >
+          <span class="text-base font-medium text-grey-30 3xl:text-xl">{{ period }}</span>
         </p>
 
         <div class="flex w-full flex-col">
-          <div class="flex w-full flex-col items-center gap-5 rounded-t-[14px] border border-white-95 bg-white p-5 lg:gap-6 lg:p-7.5 3xl:gap-7.5 3xl:p-10">
-            <p class="w-full text-center text-[18px] font-medium leading-normal text-grey-15 3xl:text-[20px]">
+          <div
+            class="flex w-full flex-col items-center gap-5 rounded-t-[14px] border border-white-95 bg-white p-5 lg:gap-6 lg:p-7.5 3xl:gap-7.5 3xl:p-10"
+          >
+            <p
+              class="w-full text-center text-lg leading-normal font-medium text-grey-15 3xl:text-xl"
+            >
               Available Features
             </p>
             <ul class="flex w-full flex-col gap-5 lg:px-7.5">
@@ -123,7 +136,7 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
                     class="size-4 3xl:size-5"
                   />
                 </span>
-                <span class="text-sm leading-normal text-grey-30 3xl:text-[18px]">
+                <span class="text-sm leading-normal text-grey-30 3xl:text-lg">
                   {{ feature.label }}
                 </span>
               </li>
@@ -132,7 +145,7 @@ const period = computed(() => (billing.value === 'monthly' ? '/month' : '/year')
 
           <NuxtLink
             to="/signup"
-            class="flex w-full items-center justify-center rounded-b-lg bg-orange-50 px-6 py-4.5 text-sm font-semibold text-white transition-colors hover:bg-orange-50/90 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 3xl:py-5 3xl:text-[18px]"
+            class="flex w-full items-center justify-center rounded-b-lg bg-orange-50 px-6 py-4.5 text-sm font-semibold text-white transition-colors hover:bg-orange-50/90 focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden 3xl:py-5 3xl:text-lg"
           >
             Get Started
           </NuxtLink>

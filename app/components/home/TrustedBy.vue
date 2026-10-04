@@ -20,10 +20,10 @@ const companyLogos: CompanyLogo[] = [
 
 <template>
   <section>
-    <h2 class="sr-only">
-      Trusted by teams at leading companies
-    </h2>
-    <ul class="flex divide-x divide-white-95 rounded-lg border border-white-95 bg-white-99 p-2.5 lg:p-6 3xl:rounded-xl 3xl:p-7.5">
+    <h2 class="sr-only">Trusted by teams at leading companies</h2>
+    <ul
+      class="flex divide-x divide-white-95 rounded-lg border border-white-95 bg-white-99 p-2.5 lg:p-6 3xl:rounded-xl 3xl:p-7.5"
+    >
       <li
         v-for="(logo, index) in companyLogos"
         :key="logo.name"

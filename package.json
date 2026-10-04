@@ -11,6 +11,8 @@
     "prepare": "husky",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
@@ -25,7 +27,10 @@
     "@nuxt/eslint": "^1.17.0",
     "@tailwindcss/vite": "^4",
     "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "prettier": "^3.9.9",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.3.12"

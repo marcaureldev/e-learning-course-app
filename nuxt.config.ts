@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
-      stylistic: true,
+      stylistic: false,
     },
   },
 })

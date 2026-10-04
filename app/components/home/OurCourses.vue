@@ -13,7 +13,8 @@ interface Course {
 const courses: Course[] = [
   {
     title: 'Web Design Fundamentals',
-    description: 'Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.',
+    description:
+      'Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.',
     author: 'John Smith',
     duration: '4 Weeks',
     level: 'Beginner',
@@ -23,7 +24,8 @@ const courses: Course[] = [
   },
   {
     title: 'UI/UX Design',
-    description: 'Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.',
+    description:
+      'Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.',
     author: 'Emily Johnson',
     duration: '6 Weeks',
     level: 'Intermediate',
@@ -33,7 +35,8 @@ const courses: Course[] = [
   },
   {
     title: 'Mobile App Development',
-    description: 'Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.',
+    description:
+      'Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.',
     author: 'David Brown',
     duration: '8 Weeks',
     level: 'Intermediate',
@@ -43,7 +46,8 @@ const courses: Course[] = [
   },
   {
     title: 'Graphic Design for Beginners',
-    description: 'Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.',
+    description:
+      'Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.',
     author: 'Sarah Thompson',
     duration: '10 Weeks',
     level: 'Beginner',
@@ -53,7 +57,8 @@ const courses: Course[] = [
   },
   {
     title: 'Front-End Web Development',
-    description: 'Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.',
+    description:
+      'Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.',
     author: 'Michael Adams',
     duration: '10 Weeks',
     level: 'Intermediate',
@@ -63,7 +68,8 @@ const courses: Course[] = [
   },
   {
     title: 'Advanced JavaScript',
-    description: 'Take your JavaScript skills to the next level. Explore advanced concepts like closures, prototypes, asynchronous programming, and ES6 features. Build complex applications with confidence.',
+    description:
+      'Take your JavaScript skills to the next level. Explore advanced concepts like closures, prototypes, asynchronous programming, and ES6 features. Build complex applications with confidence.',
     author: 'Jennifer Wilson',
     duration: '6 Weeks',
     level: 'Advance',
@@ -78,22 +84,16 @@ const courses: Course[] = [
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
     <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
-        <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
+        <h2 class="text-3xl leading-normal font-semibold text-grey-15 lg:text-[38px] 3xl:text-5xl">
           Our Courses
         </h2>
-        <p class="text-sm leading-normal text-grey-35 lg:text-[16px] 3xl:text-[18px]">
+        <p class="text-sm leading-normal text-grey-35 lg:text-base 3xl:text-lg">
           Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
-          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
+          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
+          senectus in.
         </p>
       </div>
-      <UiButton
-        to="/courses"
-        variant="soft"
-        size="lg"
-        class="shrink-0"
-      >
-        View All
-      </UiButton>
+      <UiButton to="/courses" variant="soft" size="lg" class="shrink-0"> View All </UiButton>
     </div>
 
     <ul class="grid gap-5 lg:grid-cols-2 3xl:gap-7.5">
@@ -121,35 +121,28 @@ const courses: Course[] = [
                 <span
                   v-for="tag in [course.duration, course.level]"
                   :key="tag"
-                  class="rounded-md border border-white-95 bg-white px-3.5 py-2 text-sm text-grey-30 3xl:rounded-lg 3xl:px-4 3xl:py-2.5 3xl:text-[18px]"
+                  class="rounded-md border border-white-95 bg-white px-3.5 py-2 text-sm text-grey-30 3xl:rounded-lg 3xl:px-4 3xl:py-2.5 3xl:text-lg"
                 >
                   {{ tag }}
                 </span>
               </div>
-              <p class="whitespace-nowrap text-[16px] font-medium text-grey-15 3xl:text-[20px]">
+              <p class="text-base font-medium whitespace-nowrap text-grey-15 3xl:text-xl">
                 By {{ course.author }}
               </p>
             </div>
 
             <div class="flex flex-col gap-2.5 3xl:gap-3.5">
-              <h3 class="text-xl font-semibold leading-normal text-grey-15 3xl:text-[24px]">
+              <h3 class="text-xl leading-normal font-semibold text-grey-15 3xl:text-2xl">
                 {{ course.title }}
               </h3>
-              <p class="text-sm leading-normal text-grey-30 lg:text-[16px] 3xl:text-[18px]">
+              <p class="text-sm leading-normal text-grey-30 lg:text-base 3xl:text-lg">
                 {{ course.description }}
               </p>
             </div>
           </div>
         </div>
 
-        <UiButton
-          to="/courses"
-          variant="card"
-          size="lg"
-          class="w-full"
-        >
-          Get it Now
-        </UiButton>
+        <UiButton to="/courses" variant="card" size="lg" class="w-full"> Get it Now </UiButton>
       </li>
     </ul>
   </section>

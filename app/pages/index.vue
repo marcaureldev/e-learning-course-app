@@ -1,9 +1,11 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Unlock Your Creative Potential',
-  description: 'Online design and development courses. Learn from industry experts and enhance your skills.',
+  description:
+    'Online design and development courses. Learn from industry experts and enhance your skills.',
   ogTitle: 'Unlock Your Creative Potential | Online Courses',
-  ogDescription: 'Online design and development courses. Learn from industry experts and enhance your skills.',
+  ogDescription:
+    'Online design and development courses. Learn from industry experts and enhance your skills.',
   ogType: 'website',
 })
 </script>

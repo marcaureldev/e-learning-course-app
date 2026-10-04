@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /*
  * Tokens de design, reproduits à l'identique des variables de la maquette Figma
@@ -26,8 +26,8 @@
   --color-white-99: #fcfcfd;
 
   --font-sans:
-    "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Le frame desktop de la maquette réclame 1596 px de contenu plus 2 × 162 px
      de gouttières : son échelle ne s'applique qu'au-delà de 1860 px utiles.
@@ -49,7 +49,7 @@
 
   /* Tailwind 4 rend les boutons `cursor: default` ; on restaure le pointeur. */
   button:not(:disabled),
-  [role="button"]:not(:disabled) {
+  [role='button']:not(:disabled) {
     cursor: pointer;
   }
 }

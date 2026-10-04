@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface FooterColumn {
   title: string
-  links: { label: string, to: string }[]
+  links: { label: string; to: string }[]
 }
 
 const columns: FooterColumn[] = [
@@ -33,14 +33,18 @@ const socials = [
 ]
 
 const contacts = [
-  { icon: '/icons/mail-icon.svg', label: 'hello@skillbridge.com', href: 'mailto:hello@skillbridge.com' },
+  {
+    icon: '/icons/mail-icon.svg',
+    label: 'hello@skillbridge.com',
+    href: 'mailto:hello@skillbridge.com',
+  },
   { icon: '/icons/phone-icon.svg', label: '+91 91813 23 2309', href: 'tel:+9191813232309' },
   { icon: '/icons/location-icon.svg', label: 'Somewhere in the World', href: undefined },
 ]
 </script>
 
 <template>
-  <footer class="mt-12 bg-white pb-7.5 pt-12 lg:mt-15 lg:pt-20 3xl:mt-25 3xl:pt-25">
+  <footer class="mt-12 bg-white pt-12 pb-7.5 lg:mt-15 lg:pt-20 3xl:mt-25 3xl:pt-25">
     <UiContainer>
       <div class="flex flex-col gap-10 lg:gap-12.5">
         <div class="flex flex-col justify-between gap-10 lg:flex-row lg:items-start">
@@ -54,14 +58,11 @@ const contacts = [
               class="size-11 3xl:size-13.5"
             />
             <ul class="flex flex-wrap gap-4 lg:w-98 lg:gap-5">
-              <li
-                v-for="contact in contacts"
-                :key="contact.label"
-              >
+              <li v-for="contact in contacts" :key="contact.label">
                 <component
                   :is="contact.href ? 'a' : 'span'"
                   :href="contact.href"
-                  class="flex items-center gap-1.5 rounded-md text-[16px] leading-normal text-grey-15 3xl:text-[18px]"
+                  class="flex items-center gap-1.5 rounded-md text-base leading-normal text-grey-15 3xl:text-lg"
                   :class="contact.href ? 'transition-colors hover:text-orange-50' : ''"
                 >
                   <NuxtImg
@@ -85,17 +86,14 @@ const contacts = [
               class="flex flex-1 flex-col gap-3.5"
               :aria-label="column.title"
             >
-              <h2 class="text-[18px] font-semibold leading-normal text-grey-15 3xl:text-[20px]">
+              <h2 class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl">
                 {{ column.title }}
               </h2>
               <ul class="flex flex-col gap-2">
-                <li
-                  v-for="link in column.links"
-                  :key="link.label"
-                >
+                <li v-for="link in column.links" :key="link.label">
                   <NuxtLink
                     :to="link.to"
-                    class="rounded text-[16px] leading-normal text-grey-35 transition-colors hover:text-orange-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 3xl:text-[18px]"
+                    class="rounded text-base leading-normal text-grey-35 transition-colors hover:text-orange-50 focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden 3xl:text-lg"
                   >
                     {{ link.label }}
                   </NuxtLink>
@@ -104,19 +102,16 @@ const contacts = [
             </nav>
 
             <div class="flex flex-1 flex-col gap-3.5">
-              <h2 class="text-[18px] font-semibold leading-normal text-grey-15 3xl:text-[20px]">
+              <h2 class="text-lg leading-normal font-semibold text-grey-15 3xl:text-xl">
                 Social Profiles
               </h2>
               <ul class="flex gap-3.5">
-                <li
-                  v-for="social in socials"
-                  :key="social.name"
-                >
+                <li v-for="social in socials" :key="social.name">
                   <a
                     :href="social.href"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex rounded-lg border border-white-95 bg-white-97 p-3 transition-colors hover:bg-white-95 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 3xl:p-3.5"
+                    class="flex rounded-lg border border-white-95 bg-white-97 p-3 transition-colors hover:bg-white-95 focus-visible:ring-2 focus-visible:ring-orange-50 focus-visible:outline-hidden 3xl:p-3.5"
                     :aria-label="`${social.name} (opens in a new tab)`"
                   >
                     <NuxtImg
@@ -134,9 +129,9 @@ const contacts = [
           </div>
         </div>
 
-        <hr class="border-white-95">
+        <hr class="border-white-95" />
 
-        <p class="text-center text-[16px] leading-normal text-grey-40 3xl:text-[18px]">
+        <p class="text-center text-base leading-normal text-grey-40 3xl:text-lg">
           &copy; 2023 Skillbridge. All rights reserved.
         </p>
       </div>

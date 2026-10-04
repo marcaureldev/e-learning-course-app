@@ -20,12 +20,12 @@ pnpm dev        # http://localhost:3000
 
 ## Scripts
 
-| Commande | Rôle |
-| --- | --- |
-| `pnpm dev` | serveur de développement |
-| `pnpm build` | build de production |
-| `pnpm preview` | prévisualise le build |
-| `pnpm lint` | ESLint (`lint:fix` pour corriger) |
+| Commande         | Rôle                               |
+| ---------------- | ---------------------------------- |
+| `pnpm dev`       | serveur de développement           |
+| `pnpm build`     | build de production                |
+| `pnpm preview`   | prévisualise le build              |
+| `pnpm lint`      | ESLint (`lint:fix` pour corriger)  |
 | `pnpm typecheck` | vérification des types (`vue-tsc`) |
 
 ## Convention de commits
@@ -51,15 +51,15 @@ Le hook s'installe tout seul : `pnpm install` déclenche le script `prepare`.
 > `50` est la teinte médiane, pas la plus claire. `orange-50` est donc l'orange
 > de marque (`#FF9500`) et non un orange pâle.
 
-| Token Figma | Classe | Valeur |
-| --- | --- | --- |
-| `Orange/50` | `orange-50` | `#FF9500` |
-| `Orange/90` | `orange-90` | `#FFEACC` |
-| `Orange/95` | `orange-95` | `#FFF4E5` |
-| `Orange/97` | `orange-97` | `#FFF9F0` |
-| `Grey/10` → `Grey/40` | `grey-10` … `grey-40` | `#1A1A1A` → `#656567` |
-| `Absolute/White` | `white` | `#FFFFFF` (fourni par Tailwind) |
-| `White/95` / `97` / `99` | `white-95` … | `#F1F1F3` / `#F7F7F8` / `#FCFCFD` |
+| Token Figma              | Classe                | Valeur                            |
+| ------------------------ | --------------------- | --------------------------------- |
+| `Orange/50`              | `orange-50`           | `#FF9500`                         |
+| `Orange/90`              | `orange-90`           | `#FFEACC`                         |
+| `Orange/95`              | `orange-95`           | `#FFF4E5`                         |
+| `Orange/97`              | `orange-97`           | `#FFF9F0`                         |
+| `Grey/10` → `Grey/40`    | `grey-10` … `grey-40` | `#1A1A1A` → `#656567`             |
+| `Absolute/White`         | `white`               | `#FFFFFF` (fourni par Tailwind)   |
+| `White/95` / `97` / `99` | `white-95` …          | `#F1F1F3` / `#F7F7F8` / `#FCFCFD` |
 
 L'échelle `gray` de Tailwind reste disponible et inchangée : nos gris
 portent l'orthographe britannique `grey`, reprise de Figma.
