@@ -15,6 +15,7 @@ useSeoMeta({
       <HomeTrustedBy />
       <HomeFeaturedVideo />
       <HomeBenefits />
+      <HomeOurCourses />
     </div>
   </UiContainer>
 </template>

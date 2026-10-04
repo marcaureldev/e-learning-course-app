@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Variant = 'primary' | 'secondary' | 'soft' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'soft' | 'card' | 'ghost'
 type Size = 'sm' | 'md' | 'lg'
 
 const props = withDefaults(defineProps<{
@@ -24,6 +24,7 @@ const variantClasses: Record<Variant, string> = {
   primary: 'bg-orange-50 font-semibold text-white hover:bg-orange-50/90',
   secondary: 'border border-white-95 bg-white font-medium text-grey-15 hover:bg-white-95',
   soft: 'border border-white-95 bg-white-99 font-medium text-grey-15 hover:bg-white-95',
+  card: 'border border-white-95 bg-white-97 font-medium text-grey-15 hover:bg-white-95',
   ghost: 'text-grey-30 hover:bg-white-95 hover:text-grey-10',
 }
 
