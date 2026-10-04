@@ -23,11 +23,11 @@ const companyLogos: CompanyLogo[] = [
     <h2 class="sr-only">
       Trusted by teams at leading companies
     </h2>
-    <ul class="flex divide-x divide-white-95 rounded-lg border border-white-95 bg-white-99 p-[10px] lg:p-[24px] 3xl:rounded-xl 3xl:p-[30px]">
+    <ul class="flex divide-x divide-white-95 rounded-lg border border-white-95 bg-white-99 p-2.5 lg:p-6 3xl:rounded-xl 3xl:p-7.5">
       <li
         v-for="(logo, index) in companyLogos"
         :key="logo.name"
-        class="flex min-w-0 flex-1 items-center justify-center px-4 py-[20px] sm:px-[30px] 3xl:px-[40px] 3xl:py-[30px]"
+        class="flex min-w-0 flex-1 items-center justify-center px-4 py-5 sm:px-7.5 3xl:px-10 3xl:py-7.5"
         :class="{ 'max-lg:hidden': index >= 3 }"
       >
         <NuxtImg
@@ -35,7 +35,7 @@ const companyLogos: CompanyLogo[] = [
           :alt="logo.name"
           :width="logo.width"
           height="34"
-          class="h-6 w-auto lg:h-[28px] 3xl:h-[34px]"
+          class="size-6 w-auto lg:size-7 3xl:size-8.5"
         />
       </li>
     </ul>

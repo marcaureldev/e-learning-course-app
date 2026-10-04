@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About Us',
-  description: 'About Us — online design and development courses.',
+  description: 'About Us - online design and development courses.',
 })
 </script>
 
