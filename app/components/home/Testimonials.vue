@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-75 3xl:gap-90">
+    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
         <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
           Our Testimonials
@@ -55,14 +55,14 @@ const testimonials: Testimonial[] = [
       <li
         v-for="testimonial in testimonials"
         :key="testimonial.author"
-        class="flex flex-col overflow-hidden rounded-2.5 border border-white-95 bg-white 3xl:rounded-xl"
+        class="flex flex-col overflow-hidden rounded-[10px] border border-white-95 bg-white 3xl:rounded-xl"
       >
         <blockquote class="flex-1 p-6 text-sm leading-normal text-grey-30 lg:p-10 lg:text-[16px] 3xl:p-12.5 3xl:text-[18px]">
           {{ testimonial.quote }}
         </blockquote>
 
         <div class="flex flex-wrap items-center gap-4 border-t border-white-95 bg-white-99 px-6 py-5 lg:px-10 lg:py-6 3xl:px-12.5 3xl:py-7.5">
-          <div class="flex min-w-0 flex-1 items-center gap-2.5 3xl:gap-3.5">
+          <div class="flex min-w-0 flex-1 items-center gap-2.5 3xl:gap-3.75">
             <NuxtImg
               :src="testimonial.avatar"
               alt=""

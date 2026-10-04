@@ -37,7 +37,7 @@ const toggle = (index: number) => {
 </script>
 
 <template>
-  <section class="flex flex-col gap-10 rounded-xl bg-white p-6 lg:flex-row lg:gap-20 lg:p-20 3xl:gap-50 3xl:p-25">
+  <section class="flex flex-col gap-10 rounded-xl bg-white p-6 lg:flex-row lg:gap-20 lg:p-20 3xl:gap-30 3xl:p-25">
     <div class="flex flex-col items-start gap-8 lg:w-102 lg:shrink-0 lg:gap-10 3xl:gap-12.5">
       <div class="flex w-full flex-col gap-2 lg:gap-2 3xl:gap-2.5">
         <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
@@ -101,7 +101,7 @@ const toggle = (index: number) => {
           <NuxtLink
             v-if="item.relatedLink"
             to="/courses"
-            class="flex items-center gap-4 rounded-lg border border-white-95 bg-white-97 px-5 py-4 transition-colors hover:bg-white-95 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 lg:px-6 lg:py-3 3xl:px-7.5 3xl:py-4"
+            class="flex items-center gap-4 rounded-lg border border-white-95 bg-white-97 px-5 py-4 transition-colors hover:bg-white-95 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-50 lg:px-6 lg:py-4 3xl:px-7.5 3xl:py-5"
           >
             <span class="flex-1 text-[16px] font-medium leading-normal text-grey-20 3xl:text-[18px]">
               {{ item.relatedLink }}

@@ -34,7 +34,7 @@ const benefits: Benefit[] = [
 
 <template>
   <section class="flex flex-col gap-10 lg:gap-15 3xl:gap-20">
-    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-75 3xl:gap-90">
+    <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:gap-62.5 3xl:gap-75">
       <div class="flex flex-1 flex-col gap-1 3xl:gap-1.5">
         <h2 class="text-3xl font-semibold leading-normal text-grey-15 lg:text-[38px] 3xl:text-[48px]">
           Benefits
@@ -58,7 +58,7 @@ const benefits: Benefit[] = [
       <li
         v-for="(benefit, index) in benefits"
         :key="benefit.title"
-        class="flex flex-col items-end gap-8 rounded-2.5 bg-white p-6 lg:gap-10 lg:p-10 3xl:gap-12.5 3xl:rounded-xl 3xl:p-12.5"
+        class="flex flex-col items-end gap-8 rounded-[10px] bg-white p-6 lg:gap-10 lg:p-10 3xl:gap-12.5 3xl:rounded-xl 3xl:p-12.5"
       >
         <p class="w-full text-right text-5xl font-bold leading-none text-grey-15 lg:text-[60px] 3xl:text-[80px]">
           {{ String(index + 1).padStart(2, '0') }}

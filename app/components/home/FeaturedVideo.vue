@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex aspect-358/247 items-center justify-center overflow-hidden rounded-xl border-4 border-white-97 lg:aspect-1596/790 lg:border-16"
+    class="relative flex aspect-358/247 items-center justify-center overflow-hidden rounded-[10px] border-4 3xl:rounded-xl border-white-97 lg:aspect-1280/649 lg:border-16 3xl:aspect-1596/790"
   >
     <NuxtImg
       src="/images/learning-together.png"
@@ -23,7 +23,7 @@
         aria-hidden="true"
         width="44"
         height="44"
-        class="size-7 lg:size-11"
+        class="size-7 lg:size-8.5 3xl:size-11"
       />
     </button>
   </section>

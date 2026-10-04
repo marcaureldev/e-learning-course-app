@@ -9,7 +9,7 @@
           aria-hidden="true"
           width="18"
           height="15"
-          class="size-4 shrink-0 3xl:size-4.5"
+          class="w-4 shrink-0 3xl:w-4.5"
         />
       </p>
     </div>

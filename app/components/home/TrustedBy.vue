@@ -35,7 +35,7 @@ const companyLogos: CompanyLogo[] = [
           :alt="logo.name"
           :width="logo.width"
           height="34"
-          class="size-6 w-auto lg:size-7 3xl:size-8.5"
+          class="h-6 w-auto lg:h-7 3xl:h-8.5"
         />
       </li>
     </ul>
