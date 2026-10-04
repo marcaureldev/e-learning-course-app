@@ -31,8 +31,11 @@
 
   /* Le frame desktop de la maquette réclame 1596 px de contenu plus 2 × 162 px
      de gouttières : son échelle ne s'applique qu'au-delà de 1860 px utiles.
-     En deçà, c'est le frame laptop (1440) qui fait foi. */
-  --breakpoint-3xl: 1800px;
+     En deçà, c'est le frame laptop (1440) qui fait foi.
+     Déclaré en rem, comme les points de rupture natifs : Tailwind trie les
+     media queries par valeur et place une valeur en px avant toutes celles en
+     rem, ce qui ferait gagner `lg` sur `3xl` à 1920 px. */
+  --breakpoint-3xl: 112.5rem;
 }
 
 @layer base {
