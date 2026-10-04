@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+/*
+ * Tokens de design, reproduits à l'identique des variables de la maquette Figma
+ * (convention `Famille/Luminosité`), afin qu'une valeur lue dans le design se
+ * traduise sans ambiguïté en classe utilitaire : `Grey/30` -> `text-grey-30`.
+ *
+ * ATTENTION : cette convention est l'inverse de celle de Tailwind. Ici `50`
+ * désigne la teinte médiane (l'orange de marque), pas la plus claire.
+ */
+@theme {
+  --color-orange-50: #ff9500;
+  --color-orange-90: #ffeacc;
+  --color-orange-95: #fff4e5;
+  --color-orange-97: #fff9f0;
+
+  --color-grey-10: #1a1a1a;
+  --color-grey-15: #262626;
+  --color-grey-20: #333333;
+  --color-grey-30: #4c4c4c;
+  --color-grey-35: #59595a;
+  --color-grey-40: #656567;
+
+  --color-white-95: #f1f1f3;
+  --color-white-97: #f7f7f8;
+  --color-white-99: #fcfcfd;
+
+  --font-sans:
+    'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Le frame desktop de la maquette réclame 1596 px de contenu plus 2 × 162 px
+     de gouttières : son échelle ne s'applique qu'au-delà de 1860 px utiles.
+     En deçà, c'est le frame laptop (1440) qui fait foi.
+     Déclaré en rem, comme les points de rupture natifs : Tailwind trie les
+     media queries par valeur et place une valeur en px avant toutes celles en
+     rem, ce qui ferait gagner `lg` sur `3xl` à 1920 px. */
+  --breakpoint-3xl: 112.5rem;
+}
+
+@layer base {
+  html {
+    @apply h-full scroll-smooth antialiased;
+  }
+
+  body {
+    @apply min-h-full bg-white-97 font-sans text-grey-10;
+  }
+
+  /* Tailwind 4 rend les boutons `cursor: default` ; on restaure le pointeur. */
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

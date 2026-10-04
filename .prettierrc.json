@@ -1,0 +1,8 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 80,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./app/assets/css/main.css",
+  "tailwindFunctions": ["clsx", "cn"]
+}
