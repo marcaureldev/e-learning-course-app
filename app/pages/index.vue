@@ -18,6 +18,7 @@ useSeoMeta({
       <HomeOurCourses />
       <HomeTestimonials />
       <HomePricing />
+      <HomeFaq />
     </div>
   </UiContainer>
 </template>
